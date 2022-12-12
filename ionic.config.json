@@ -1,0 +1,7 @@
+{
+  "name": "scanqr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
