@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'scanqr',
+  appId: 'com.duoc.registrapp',
+  appName: 'Registrapp',
   webDir: 'www',
   bundledWebRuntime: false
 };

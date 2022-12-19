@@ -1,0 +1,74 @@
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+
+  <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="./../../../assets/img/people-working-together-online.png" style="width: 500px;" />
+        <h2>Bienvenido a Registrapp</h2>
+
+        <p>
+          La <b>aplicación móvil</b> que te ayudará con la asistencia en clases
+        </p>
+        <p>
+          Un proyecto de DuocUC enfocado en alumnos y profesores para la organización de labores de asistencia en la
+          sala de clases a fin de evitar errores y optimizar el tiempo de estudio
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Logo_DuocUC.svg" style="max-width:250px;" />
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./../../../assets/img/data-security-threat.png" />
+      <h2>¿Cómo funciona?</h2>
+      <p>
+        <b>Es muy simple</b>.
+
+      </p>
+      <p>
+        Inicia sesión con tu correo institucional
+      </p>
+      <p>
+        El sistema detectará si tu usuario corresponde a Docente o Alumno.
+      </p>
+
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./../../../assets/img/instructor-teaching-in-a-classroom.png" />
+      <h2>¿Eres docente?</h2>
+      <p><ion-icon name="list-outline"></ion-icon>
+        Si eres <b>profesor</b>, debes ingresar a https://registrapp-33925.web.app desde tu computador.
+      </p>
+      <p>Al iniciar, se desplegará una lista con tus secciones asignadas</p>
+      <p>Ingresa a tu la sección donde te encuentras realizando la clase y habilita la asistencia <ion-icon
+          name="add-circle"></ion-icon></p>
+      <p><ion-icon name="qr-code-outline"></ion-icon> Se desplegará un código QR donde los alumnos podrán registrarse
+        y
+        quedar presente</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./../../../assets/img/person-working-online.png" />
+      <h2>¿Eres Alumno?</h2>
+      <p>Si eres <b>alumno</b> ingresa a la Mis secciones donde encontrarás todas tus asignaturas <ion-icon
+          name="documents-outline"></ion-icon>
+      </p>
+      <p><ion-icon name="newspaper"></ion-icon> Ingresa a tu sección donde te encuentras realizando la clase</p>
+      <p><ion-icon name="analytics-outline"></ion-icon> Selecciona tu asignatura actual. Se mostrarán datos de la
+        asignatura, como también de la asistencia</p>
+      <p> Escanéa el código QR que habilitó tu profesor y <strong>¡listo!</strong> &nbsp; <b>¡Ya estás
+          presente!</b>&nbsp;
+        <ion-icon name="camera"></ion-icon>
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./../../../assets/img/people-collaborating-with-tech-.png" />
+      <h2>¿Estás Listo?</h2>
+      <ion-button fill="clear" color="tertiary" [routerLink]="['/login']">Iniciar sesión <ion-icon slot="end"
+          name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

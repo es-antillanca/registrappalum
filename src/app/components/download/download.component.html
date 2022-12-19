@@ -1,0 +1,57 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+
+  <div id="container">
+
+    <img class="img" src="./../../../assets/img/app.png">
+
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ng-template #desktop>
+              <ion-col>
+                <h1 class="ion-text-center">DESCARGA</h1>
+                <h2>NUESTRA APP</h2>
+
+                <h2>Te invitamos a descargar la aplicación a través del código QR para que puedas acceder a todas las
+                  <b>funcionalidades</b>
+                </h2>
+              </ion-col>
+              <ion-col>
+                <qrcode [qrdata]="myAngularxQrCode" [width]="250" [errorCorrectionLevel]="'M'"></qrcode>
+
+              </ion-col>
+            </ng-template>
+            <ng-template #mobileweb>
+              <ion-col>
+                <h1 class="ion-text-center">DESCARGA</h1>
+                <h2>NUESTRA APP</h2>
+
+                <h2>Te invitamos a descargar la aplicación para que puedas acceder a todas las
+                  <b>funcionalidades</b>
+                </h2>
+              </ion-col>
+              <ion-col>
+                <ion-button shape="round" color="success">
+                  Playstore
+                  <ion-icon slot="end" name="logo-google-playstore"></ion-icon>
+                </ion-button>
+                <ion-button shape="round" color="dark">
+                  Appstore
+                  <ion-icon slot="end" name="logo-apple-appstore"></ion-icon>
+                </ion-button>
+
+              </ion-col>
+
+            </ng-template>
+            <p *ngIf="isMobileWeb; then mobileweb else desktop"></p>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+
+</ion-content>

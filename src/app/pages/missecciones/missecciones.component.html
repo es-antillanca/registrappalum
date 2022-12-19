@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis secciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <img alt="Silhouette of mountains"
+      src="./../../../assets/img/digital-marketing-specialist-giving-a-presentation.png" />
+
+    <ion-card-content>
+      <ion-list lines="none" *ngFor="let sec of seccion">
+        <ion-item button detail="true" [routerLink]="['/seccion', sec.id]">
+          <ion-label>
+            <h3>{{sec.nombreSec}}</h3>
+            <p>{{sec.num}}</p>
+          </ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

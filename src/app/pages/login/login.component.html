@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div id="container">
+    <h3 class="ion-text-center">Iniciar sesión</h3>
+
+    <ion-card color="light">
+      <ion-card-content>
+        <img alt="LoginLock" src="./../../../assets/img/startup.png" style="max-width: 500px;" />
+        <form [formGroup]="credentials" novalidate (ngSubmit)="login()">
+          <ion-item color="light" class="item-has-focus ion-touched ion-invalid">
+            <ion-label position="floating">Correo electrónico</ion-label>
+            <ion-input placeholder="Ingrese su email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item color="light">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" placeholder="Contraseña con mínimo 8 caracteres"
+              formControlName="password"></ion-input>
+          </ion-item>
+          <br>
+          <ion-button expand="block" shape="round" color="tertiary" type="submit"
+            [disabled]="!credentials.valid">Iniciar sesión<ion-icon slot="end" name="log-in"></ion-icon></ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>

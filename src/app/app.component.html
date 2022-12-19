@@ -1,3 +1,16 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ng-template #descarga>
+    <app-download></app-download>
+  </ng-template>
+
+
+  <ng-template #mobile>
+
+    <ion-router-outlet></ion-router-outlet>
+
+  </ng-template>
+
+  <p *ngIf="isMobile; then mobile else descarga"></p>
+
+
 </ion-app>

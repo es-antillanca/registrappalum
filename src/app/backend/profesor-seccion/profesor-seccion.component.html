@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis secciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>{{seccion.nombreSec}} - {{activeID}}</h3>
+  <ion-button expand="block" shape="round" color="tertiary" class="ion-margin" (click)="generarQr()">Generar
+    asistencia<ion-icon slot="end" name="qr-code"></ion-icon></ion-button>
+  <ion-card class="ion-text-center">
+    <qrcode [qrdata]="qrString" [width]="250" [errorCorrectionLevel]="'M'"></qrcode>
+  </ion-card>
+
+  <h3>Alumnos inscritos</h3>
+  <ion-card>
+    <ion-card-content>
+      <ion-list lines="none" *ngFor="let alumno of alumnosSeccion">
+        <ion-item>
+          <ion-label>
+            <h3>{{alumno.nombre}}</h3>
+            <p>{{alumno.run}}-{{alumno.dv}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

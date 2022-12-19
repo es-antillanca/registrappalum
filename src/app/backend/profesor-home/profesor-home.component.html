@@ -1,0 +1,46 @@
+<h3>Bienvenido, profesor</h3>
+
+<ion-card>
+  <ion-card-content>
+    <ion-item lines="none">
+      <ng-template #male>
+        <img src="./../../../assets/img/male-profile-icon.png" style="width: 50px; margin: 10px;" />
+
+
+      </ng-template>
+      <ng-template #female>
+
+        <img src="./../../../assets/img/female-profile-photo.png" style="width: 50px; margin: 10px;" />
+
+
+      </ng-template>
+      <p *ngIf="userLogged.genero == 'Masculino';then male else female "></p>
+      <ion-label>
+        <h3>{{userLogged.nombre}}&nbsp;{{userLogged.apellidoPat}}</h3>
+        <p>{{userLogged.email}}</p>
+        <p>{{userLogged.carrera}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+
+<h3>Mis secciones</h3>
+
+<ion-slides [pager]="true" [options]="slideOpts">
+  <ion-slide *ngFor="let sec of secciones">
+    <ion-card class="speaker-card">
+
+      <img src="./../../../assets/img/business,-entrepreneurship-and-growth.png"
+        style="max-height: 350px; max-width: 550px;" />
+
+
+      <ion-item lines="none" button detail="true" [routerLink]="['/inicio/seccionProf',sec.num]">
+        <ion-label>
+          <h3><strong>{{sec.nombreSec}}</strong></h3>
+          <p>{{sec.num}}</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-card>
+  </ion-slide>
+</ion-slides>

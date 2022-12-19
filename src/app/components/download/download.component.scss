@@ -1,0 +1,83 @@
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0%;
+    transform: translateY(100%);
+}
+
+.img {
+    width: 1000px;
+    position: absolute;
+    top: -80%;
+    transform: translateX(0);
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #8c8c8c;
+
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #4355f3;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-style: italic;
+}
+
+ion-item {
+    --highlight-height: 2px;
+    --highlight-color-focused: #4355f3;
+    --highlight-color-valid: #58d898;
+    --highlight-color-invalid: #5246ff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #container {
+        transform: translateY(60%);
+    }
+
+    .img {
+        max-width: 500px;
+        top: -70%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .img {
+        max-width: 1000px;
+        top: -120%;
+        transform: translateX(-50%);
+    }
+}
