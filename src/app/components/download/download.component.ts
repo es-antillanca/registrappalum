@@ -8,7 +8,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['./download.component.scss'],
 })
 export class DownloadComponent implements OnInit {
-  myAngularxQrCode = 'saa';
+  myAngularxQrCode = 'https://drive.google.com/file/d/1_L_trWWZ2Rqv4TJarwieJkZ8B2WNd5rE/view?usp=share_link';
   isMobileWeb = false;
   constructor(
     private platform: Platform,
@@ -27,8 +27,5 @@ export class DownloadComponent implements OnInit {
 
   ngOnInit() { }
 
-  goLoginAd() {
-    this.router.navigateByUrl('/loginAd')
-  }
 
 }
